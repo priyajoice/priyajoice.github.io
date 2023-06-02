@@ -1,0 +1,71 @@
+<!-- 
+Online HTML, CSS and JavaScript editor to run code online.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Browser</title>
+</head>
+
+<body>
+    <h2>Search Places</h2>
+<div class="input-group">
+<div class="col-sm-2">
+        <input type="search" list="search keyword" class="form-control" id="searching" name="searching" >
+</div>
+        <datalist id="search keyword">
+            <option value="Bangalore">
+            <option value="Chennai">
+            <option value="Mumbai">
+            <option value="Bhopal">
+            <option value="Lucknow">
+        </datalist>
+    
+<div class="input-group-append">
+        <button type="submit" class="btn btn-primary" onclick="OnFunction()">Submit</button>
+</div>
+</div>
+    <div class="con">
+
+      <div class="Bangalore"> 
+	<p>Bangalore</p>
+      </div>
+      <div class="Chennai">
+	<p>Chennai</p>
+      </div>
+      <div class="Mumbai">
+	<p>Mumbai</p>
+      </div>
+      <div class="Bhopal">
+	<p>Bhopal</p>
+      </div>
+      <div class="Lucknow">
+	<p>Lucknow</p>
+      </div>
+      
+      <img src="india_map.png" />
+      
+    </div>
+    <script>
+	function OnFunction() {
+	var places = ["Bangalore", "Chennai", "Mumbai", "Bhopal", "Lucknow"];
+	for (let i = 0; i < places.length; i++)
+ 	{
+    	document.getElementsByClassName(places[i])[0].setAttribute("style", 			"background-color:#000");
+	}
+	var place = document.getElementById('searching').value
+	
+	document.getElementsByClassName(place)[0].setAttribute("style", "background-color:yellow; animation: fadeIn 5s; animation-fill-mode: forwards;animation-iteration-count: 1;animation-duration: 1s;");
+                  }
+    </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
+
